@@ -14,10 +14,10 @@ public class Vehicle : MonoBehaviour
     /// </summary>
     public Rigidbody2D rb;
     public int moveDirection = 0; //this variable is used to indicate the direction of the veichle is moving in.
-    //public float speed;//This variable is used to control the seed of the vehicle.
+    public float speed;//This variable is used to control the seed of the vehicle.
     public float minSpeed = 8f;
     public float maxSpeed = 12f;
-    float speed = 1f;
+   // float speed = 1f;
     public Vector2 startingPosition;//This variable is to be used to indicate where on the map the vehicle starts(or spawn).
     public Vector2 endPosition;//This variable is to be used to indicate  the final destination of the vehicle.
 

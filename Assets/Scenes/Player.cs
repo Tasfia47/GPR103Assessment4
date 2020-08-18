@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using System.Security.Principal;
 
 /// <summary>
 /// This script must be used as the core player script for managing the player charecter is the game.
@@ -18,6 +20,9 @@ public class Player : MonoBehaviour
 
     private GameManager myGameManager;// A reference to the GameManager in the scene.
 
+    public Rigidbody2D rb;//asigning rigid body
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,24 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //set keys to -1 and 1
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+            rb.MovePosition(rb.position + Vector2.right);
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            rb.MovePosition(rb.position + Vector2.left);
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+            rb.MovePosition(rb.position + Vector2.up);
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+            rb.MovePosition(rb.position + Vector2.down);
 
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Car")
+        {
+            Debug.Log("WE LOST!");
+            Score.CurrentScore = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
