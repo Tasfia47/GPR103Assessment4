@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine;
-using System.Security.Principal;
+
 
 /// <summary>
 /// This script must be used as the core player script for managing the player charecter is the game.
@@ -11,7 +9,6 @@ using System.Security.Principal;
 public class Player : MonoBehaviour
 {
     public string playerName = "";// The players name for the purpose of  storing the high score
-
     public int playerTotalLives;//Players total possible lives.
     public int playerLivesRemaining;//Players actual lives remaining
 
@@ -21,12 +18,14 @@ public class Player : MonoBehaviour
     private GameManager myGameManager;// A reference to the GameManager in the scene.
 
     public Rigidbody2D rb;//asigning rigid body
-   
+
+  
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -41,6 +40,13 @@ public class Player : MonoBehaviour
             rb.MovePosition(rb.position + Vector2.up);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
             rb.MovePosition(rb.position + Vector2.down);
+        else if (Input.GetKeyDown(KeyCode.Space))
+        { 
+            rb.velocity = Vector2.up * 10;
+            rb.MovePosition(rb.position + rb.velocity);
+            
+        }
+           
 
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -50,6 +56,15 @@ public class Player : MonoBehaviour
             Debug.Log("WE LOST!");
             Score.CurrentScore = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        }   
+ 
+       if(col.tag == "Log")
+        this.transform.parent = col.transform;
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+       if (col.tag == "Log")
+            this.transform.parent = null;
     }
 }

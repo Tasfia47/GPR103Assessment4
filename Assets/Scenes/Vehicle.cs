@@ -17,7 +17,7 @@ public class Vehicle : MonoBehaviour
     public float speed;//This variable is used to control the seed of the vehicle.
     public float minSpeed = 8f;
     public float maxSpeed = 12f;
-   // float speed = 1f;
+   
     public Vector2 startingPosition;//This variable is to be used to indicate where on the map the vehicle starts(or spawn).
     public Vector2 endPosition;//This variable is to be used to indicate  the final destination of the vehicle.
 
