@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Security.AccessControl;
+using System.Security.Permissions;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 //using System.Diagnostics;
 
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour
     float dirX, moveSpeed = 5f;
 
     private HUD hud;
+   private Goal goal;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +36,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         hud = GameObject.Find("Canvas").GetComponent<HUD>();
-    
+        goal = GameObject.Find("Home").GetComponent<Goal>();
+        myGameManager = GameObject.Find("Frog").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -90,19 +94,24 @@ public class Player : MonoBehaviour
                 if (playerLivesRemaining == 3)
                 {
                     PlayerDied();
-                    gameOver();
-                    
+
                 }
             }
-
-             if (col.tag == "Log")
+            if (col.tag == "Goals")
+            { 
+               goal.ShowFrog(true);
+                Debug.Log("YOU WON!");
+                Score.CurrentScore += 100;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            if (col.tag == "Log")
              this.transform.parent = col.transform;
         }
         else
             playerIsAlive = false;
         if(playerIsAlive != true)
         {
-            gameOver();
+            resetPosition();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         void PlayerDied()
@@ -112,15 +121,11 @@ public class Player : MonoBehaviour
             resetPosition();
 
         }
-        void gameOver()
+        
+        void resetPosition()
         {
             playerTotalLives = 4;
             playerLivesRemaining = playerTotalLives;
-            resetPosition();
-           
-        }
-        void resetPosition()
-        {
             hud.UpdatePlayerLivesHUD(playerLivesRemaining);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

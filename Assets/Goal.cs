@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
+	public GameObject TrophyFrog;
+	public void ShowFrog(bool showFrog)
+    {
+        TrophyFrog.SetActive(showFrog);
+    }
 
-	void OnTriggerEnter2D()
-	{
-		Debug.Log("YOU WON!");
-		Score.CurrentScore += 100;
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-	}
+
 
 }
