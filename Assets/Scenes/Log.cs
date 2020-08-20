@@ -36,20 +36,20 @@ public class Log : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "River")
-        {
-            Debug.Log("WE LOST!");
-            Score.CurrentScore = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (col.tag == "Log")
+       // {
+        //    Debug.Log("WE LOST!");
+         //   Score.CurrentScore = 0;
+         //   SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       // }
+
+       // else
+       // {
+           Debug.Log("You Jumped");
+           Score.CurrentScore += 100;
+           // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        else
-        {
-            Debug.Log("You Jumped");
-            Score.CurrentScore += 100;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
 
-
-    }
+   // }
 }
