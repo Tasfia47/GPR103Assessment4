@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
             }
             else if(gameTimer >= totalGameTime)
             {
-                gameTimer = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
 

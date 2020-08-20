@@ -20,7 +20,7 @@ public class HUD : MonoBehaviour
         switch (playerTotalLives)
         {
             case 4:
-               life1.enabled = true;
+                life1.enabled = true;
                 life2.enabled = true;
                 life3.enabled = true;
                 life4.enabled = true;
