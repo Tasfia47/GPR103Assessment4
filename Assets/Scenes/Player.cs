@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;//asigning rigid body
    
     private HUD hud;
-    private Goal goal;
+   // private Goal goal;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
         hud = GameObject.Find("Canvas").GetComponent<HUD>();
 
-        goal = GameObject.Find("Home").GetComponent<Goal>();
+      //  goal = GameObject.Find("Home").GetComponent<Goal>();
 
         myGameManager = GameObject.Find("Frog").GetComponent<GameManager>();
     }
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
 
             if (col.tag == "Goals")
             {
-               
+               // Destroy(goal);
                 Debug.Log("YOU WON!");
                 Score.CurrentScore += 100;
                 resetPosition();

@@ -240,12 +240,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &25931567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2473636636619636712, guid: a52824680dc639943b8858038e3339f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1109647207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &25931568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2712812334603693671, guid: a52824680dc639943b8858038e3339f6,
@@ -549,7 +543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae4ccda324166547869caa4e738c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrophyFrog: {fileID: 1200640276}
 --- !u!1 &113565353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae4ccda324166547869caa4e738c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrophyFrog: {fileID: 401885264}
 --- !u!1001 &295283831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1329,12 +1321,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &401885264 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2473636636619636712, guid: a52824680dc639943b8858038e3339f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1168393975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &401885265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2712812334603693671, guid: a52824680dc639943b8858038e3339f6,
@@ -2104,7 +2090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae4ccda324166547869caa4e738c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrophyFrog: {fileID: 25931567}
 --- !u!1 &694177535
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,12 +3646,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1200640276 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2473636636619636712, guid: a52824680dc639943b8858038e3339f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 2399853269285913420}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1200640277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2712812334603693671, guid: a52824680dc639943b8858038e3339f6,
@@ -3870,7 +3849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257935095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 59, z: 0}
+  m_LocalPosition: {x: 1, y: -104, z: 0}
   m_LocalScale: {x: 0.16519526, y: 0.1561245, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4621,7 +4600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae4ccda324166547869caa4e738c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrophyFrog: {fileID: 1778232549}
 --- !u!1 &1593739436
 GameObject:
   m_ObjectHideFlags: 0
@@ -5048,12 +5026,6 @@ Transform:
   m_Father: {fileID: 561910473}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1778232549 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2473636636619636712, guid: a52824680dc639943b8858038e3339f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 1401492365}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1778232550 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2712812334603693671, guid: a52824680dc639943b8858038e3339f6,
@@ -5462,7 +5434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae4ccda324166547869caa4e738c34b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrophyFrog: {fileID: 2093335310}
 --- !u!1 &1904996446
 GameObject:
   m_ObjectHideFlags: 0
@@ -6127,12 +6098,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2093335310 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2473636636619636712, guid: a52824680dc639943b8858038e3339f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 295283831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2093335311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2712812334603693671, guid: a52824680dc639943b8858038e3339f6,
