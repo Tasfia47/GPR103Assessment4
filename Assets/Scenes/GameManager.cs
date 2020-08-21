@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
     public int highScore = 0;//The highest score acheived either in the session or over the lifetime of the game.
 
     [Header("Playable Area")]//edges of the map
-    public float levelConstraintTop;//The maximum positive Y value of the playable space.
-    public float levelConstraintBottom;//The maximum negative Y value of the playable space.
-    public float levelConstraintLeft;//The maximum negative X value of the playable space.
-    public float levelConstraintRight;//The maximum positive X value of the playable space.
+    public float levelConstraintTop = 8f;//The maximum positive Y value of the playable space.
+    public float levelConstraintBottom = -8f;//The maximum negative Y value of the playable space.
+    public float levelConstraintLeft= -112f ;//The maximum negative X value of the playable space.
+    public float levelConstraintRight = 112f;//The maximum positive X value of the playable space.
 
 
     [Header("Gameplay Loop")]
@@ -47,7 +47,11 @@ public class GameManager : MonoBehaviour
         //if is game running; we care about frog
         if (isGameRunning == true)
         {
-              gameTimer += Time.deltaTime;
+            levelConstraintTop = 8f;
+            levelConstraintBottom = -8f;
+            levelConstraintLeft = -112f;
+            levelConstraintRight = 112f;
+            gameTimer += Time.deltaTime;
             if(gameTimer < totalGameTime)
             {
                 gameTimeRemaining = totalGameTime - gameTimer;

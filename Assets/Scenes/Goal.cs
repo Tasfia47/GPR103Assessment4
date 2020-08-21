@@ -13,4 +13,5 @@ public class Goal : MonoBehaviour
     {
         Destroy(col.gameObject);
     }
-}
+
+    }

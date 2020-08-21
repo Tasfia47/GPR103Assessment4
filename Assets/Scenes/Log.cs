@@ -10,7 +10,7 @@ public class Log : MonoBehaviour
     public float moveSpeed = 5.0f;
     public bool moveRight = true;
 
-    private readonly float playAreaWidth = 150.0f;
+    private readonly float playAreaWidth = 120.0f;
 
     // Update is called once per frame
     void Update()
@@ -34,22 +34,9 @@ public class Log : MonoBehaviour
         }
         transform.localPosition = pos;
     }
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag == "Log")
-       // {
-        //    Debug.Log("WE LOST!");
-         //   Score.CurrentScore = 0;
-         //   SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-       // }
-
-       // else
-       // {
-           Debug.Log("You Jumped");
-           Score.CurrentScore += 100;
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
-
-   // }
+        if (col.tag == "Player")
+            this.transform.parent = null;
+    }
 }

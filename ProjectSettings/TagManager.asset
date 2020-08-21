@@ -8,6 +8,7 @@ TagManager:
   - Log
   - River
   - Goals
+  - Wall
   layers:
   - Default
   - TransparentFX
